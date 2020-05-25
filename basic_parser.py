@@ -5,7 +5,7 @@ def main():
 
   
   # get web page
-  page = requests.get("http://dataquestio.github.io/web-scraping-pages/simple.html")
+  page = requests.get("http://dataquestio.github.io/web-scraping-pages/ids_and_classes.html")
   
   print("Status code: ",page.status_code)
   
@@ -15,6 +15,12 @@ def main():
   print(soup.prettify())
   
   body = soup.find('body')
+  
+  soup.find_all(class_="outer-text")
+  
+  soup.select("p a")
+  soup.select("body p.first-item")
+  
   
     
   
