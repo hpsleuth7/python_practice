@@ -20,6 +20,10 @@ def main():
   # command driver to input 'Marcus Aurelius' into search element 
   search_input.send_keys('Marcus Aurelius')
   
+  # pull out search button
+  search_button = driver.find_element_by_xpath('/html/body/div[2]/form/fieldset/button/i')
+  
+  search_button.click()
   
   driver.quit()
   
